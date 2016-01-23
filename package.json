@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "description": "A higher-level wrapper around the Pixiv API.",
   "main": "pixiv.js",
-   "dependencies": {
+  "dependencies": {
     "bluebird": "^3.0.6",
     "request": "^2.67.0"
   },
   "devDependencies": {
     "chai": "^3.4.0",
+    "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
+    "gulp-mocha": "^2.2.0",
     "jshint": "^2.5.8",
     "mocha": "^2.3.3"
   },
