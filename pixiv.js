@@ -41,10 +41,10 @@ Pixiv.prototype.login = function(options) {
 
 
 Pixiv.prototype.search = function(options) {
-	var search_url = 'https://public-api.secure.pixiv.net/v1/search/works.json';
+	var url = 'https://public-api.secure.pixiv.net/v1/search/works.json';
 
 	var req_params = {
-		uri: search_url,
+		uri: url,
 		headers: {
 			"Authorization": "Bearer " + this.access_token,
 		},
@@ -63,10 +63,32 @@ Pixiv.prototype.search = function(options) {
 };
 
 Pixiv.prototype.work = function(id, options) {
-	var search_url = 'https://public-api.secure.pixiv.net/v1/works/' + id;
+	var url = 'https://public-api.secure.pixiv.net/v1/works/' + id;
 
 	var req_params = {
-		uri: search_url,
+		uri: url,
+		headers: {
+			"Authorization": "Bearer " + this.access_token,
+		},
+		qs: options,
+	};
+	
+	return new Promise(function(resolve, reject) {
+		request.get(req_params, function (err, res, body) {
+			if(err) { return reject(err); }
+			if(res.statusCode !== 200) { return reject(new Error('not returned 200 response: ' + res.statusCode)); }
+
+			var data = JSON.parse(body);
+			resolve(data);
+		});
+	});
+};
+
+Pixiv.prototype.user = function(id, options) {
+	var url = 'https://public-api.secure.pixiv.net/v1/users/' + id;
+
+	var req_params = {
+		uri: url,
 		headers: {
 			"Authorization": "Bearer " + this.access_token,
 		},

@@ -68,6 +68,23 @@ describe('Pixiv API', function(){
 			});
 		});
 	});
+
+	describe('user', function(){
+		it('should not error', function(){
+			return pixiv.user(12296581)
+			.then(function(data) {
+				data.status.should.equal('success');
+				data.response.should.have.length(1);
+
+				var user = data.response[0];
+				should.exist(user.id);
+				should.exist(user.account);
+				should.exist(user.name);
+				should.exist(user.profile_image_urls);
+			});
+		});
+	});
+
 });
 
 
