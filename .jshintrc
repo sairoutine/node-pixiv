@@ -4,7 +4,8 @@
         "describe": true,
         "expect": true,
         "should": true,
-        "done": true,
+        "before": true,
+        "done": true
     },
 
     "node" : true,
