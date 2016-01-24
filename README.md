@@ -79,7 +79,7 @@ Example return data.
 
 # Search API
 ```
-var Pixiv = require('./pixiv');
+var Pixiv = require('pixiv');
 
 var pixiv = new Pixiv();
 
@@ -145,7 +145,7 @@ Example return data.
 # User API
 
 ```
-var Pixiv = require('node-pixiv');
+var Pixiv = require('pixiv');
 
 var pixiv = new Pixiv();
 
