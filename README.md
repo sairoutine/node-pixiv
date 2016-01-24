@@ -30,7 +30,7 @@ If you don't know **Promise**, see [here](https://developer.mozilla.org/en-US/do
 # Work API
 
 ```
-var Pixiv = require('pixiv');
+var Pixiv = require('node-pixiv');
 
 var pixiv = new Pixiv();
 
@@ -79,7 +79,7 @@ Example return data.
 
 # Search API
 ```
-var Pixiv = require('pixiv');
+var Pixiv = require('node-pixiv');
 
 var pixiv = new Pixiv();
 
@@ -145,7 +145,7 @@ Example return data.
 # User API
 
 ```
-var Pixiv = require('pixiv');
+var Pixiv = require('node-pixiv');
 
 var pixiv = new Pixiv();
 
