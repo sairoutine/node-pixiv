@@ -84,8 +84,8 @@ var Pixiv = require('./pixiv');
 var pixiv = new Pixiv();
 
 pixiv.login({
-	username: 'test_api',
-	password: 'testapi',
+	username: 'your account username',
+	password: 'your account password',
 })
 .then(function() {
 	return pixiv.search({
@@ -152,8 +152,8 @@ var pixiv = new Pixiv();
 var user_id = 12296581;
 
 pixiv.login({
-	username: 'test_api',
-	password: 'testapi',
+	username: 'your account username',
+	password: 'your account password',
 })
 .then(function() {
 	return pixiv.user(user_id);
