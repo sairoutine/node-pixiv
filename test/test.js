@@ -4,7 +4,7 @@ var should = chai.should();
 
 var user = require('./user.json');
 
-var Pixiv = require('../pixiv');
+var Pixiv = require('../pixiv-api');
 
 
 describe('Pixiv API', function(){
