@@ -1,5 +1,6 @@
 # node-pixiv
 [![Build Status](https://travis-ci.org/sairoutine/node-pixiv.svg?branch=master)](https://travis-ci.org/sairoutine/node-pixiv)
+[![NPM](https://nodei.co/npm/node-pixiv.png?mini=true)](https://nodei.co/npm/node-pixiv/)
 
 Pixiv API for Node.js (with Authentication supported)
 
