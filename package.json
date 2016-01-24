@@ -1,5 +1,5 @@
 {
-  "name": "pixiv-api",
+  "name": "node-pixiv",
   "version": "0.1.0",
   "description": "A higher-level wrapper around the Pixiv API.",
   "main": "pixiv.js",

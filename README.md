@@ -1,11 +1,11 @@
-# pixiv-api.js
-[![Build Status](https://travis-ci.org/sairoutine/pixiv-api.svg?branch=master)](https://travis-ci.org/sairoutine/pixiv-api)
+# node-pixiv
+[![Build Status](https://travis-ci.org/sairoutine/node-pixiv.svg?branch=master)](https://travis-ci.org/sairoutine/node-pixiv)
 
 Pixiv API for Node.js (with Authentication supported)
 
 # install
 ```
-npm install pixiv-api
+npm install node-pixiv
 ```
 
 
@@ -24,13 +24,13 @@ pixiv.login({
 })
 ```
 
-pixiv-api method returns **Promise** object.
+node-pixiv method returns **Promise** object.
 If you don't know **Promise**, see [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 # Work API
 
 ```
-var Pixiv = require('pixiv-api');
+var Pixiv = require('pixiv');
 
 var pixiv = new Pixiv();
 
@@ -145,7 +145,7 @@ Example return data.
 # User API
 
 ```
-var Pixiv = require('./pixiv-api');
+var Pixiv = require('node-pixiv');
 
 var pixiv = new Pixiv();
 
