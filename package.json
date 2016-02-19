@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sairoutine/pixiv-api.git"
+    "url": "git://github.com/sairoutine/node-pixiv.git"
   },
   "keywords": [
     "pixiv",
