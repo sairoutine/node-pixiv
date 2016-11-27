@@ -45,37 +45,55 @@ pixiv.login({
 	return pixiv.work(work_id);
 })
 .then(function(data) {
-	console.log(data);
+	console.log(JSON.stringify(data));
 });
 ```
 
 Example return data.
 ```
-{ status: 'success',
-  response:
-   [ { id: 35772360,
-       title: '木漏れ日の中で',
-       caption: '先日、ニコ生で配信した物を仕上げました。\r\nhttp://com.nicovideo.jp/community/co2038400',
-       tags: [Object],
-       tools: [Object],
-       image_urls: [Object],
-       width: 1300,
-       height: 920,
-       stats: null,
-       publicity: 0,
-       age_limit: 'all-age',
-       created_time: '2013-05-18 18:58:38',
-       reuploaded_time: '2013-05-18 18:58:38',
-       user: [Object],
-       is_manga: false,
-       is_liked: false,
-       favorite_id: 0,
-       page_count: 1,
-       book_style: 'none',
-       type: 'illustration',
-       metadata: null,
-       content_type: null } ],
-  count: 1 }
+{
+	"status": "success",
+	"response": [{
+		"id": 35772360,
+		"title": "木漏れ日の中で",
+		"caption": "先日、ニコ生で配信した物を仕上げました。\r\nhttp://com.nicovideo.jp/community/co2038400",
+		"tags": ["東方", "霧雨魔理沙", "マリアリ", "アリス", "ラクガキ", "キマシタワー", "キス", "百合", "東方Project1000users入り", "アリス・マーガトロイド"],
+		"tools": ["SAI"],
+		"image_urls": {
+			"small": "http://i1.pixiv.net/c/150x150/img-master/img/2013/05/18/18/58/38/35772360_p0_master1200.jpg"
+		},
+		"width": 1300,
+		"height": 920,
+		"stats": null,
+		"publicity": 0,
+		"age_limit": "all-age",
+		"created_time": "2013-05-18 18:58:38",
+		"reuploaded_time": "2013-05-18 18:58:38",
+		"user": {
+			"id": 225672,
+			"account": "notenotenote",
+			"name": "華々つぼみ＠ツイッター",
+			"is_following": false,
+			"is_follower": false,
+			"is_friend": false,
+			"is_premium": null,
+			"profile_image_urls": {
+				"px_50x50": "http://i1.pixiv.net/user-profile/img/2011/12/24/06/11/32/3982336_5a7b714d74f1586403636537987043f9_50.jpg"
+			},
+			"stats": null,
+			"profile": null
+		},
+		"is_manga": false,
+		"is_liked": false,
+		"favorite_id": 0,
+		"page_count": 1,
+		"book_style": "none",
+		"type": "illustration",
+		"metadata": null,
+		"content_type": null
+	}],
+	"count": 1
+}
 ```
 
 # Search API
@@ -142,6 +160,7 @@ Example return data.
      total: 171526,
      pages: 20000 } }
 ```
+For a detailed description of each result, see [Work API](#work-api).
 
 # User API
 
@@ -178,5 +197,6 @@ Example return data.
        profile_image_urls: [Object],
        stats: null,
        profile: null } ],
-  count: 1 }
+  count: 1
+}
 ```
